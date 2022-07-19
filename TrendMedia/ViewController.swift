@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var mainTextField: UITextField!
     //언제 아울렛컬렉션을 사용하는 것이 좋을까?
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var date2Label: UILabel!

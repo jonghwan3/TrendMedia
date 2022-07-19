@@ -60,6 +60,12 @@
                                     <constraint firstAttribute="height" constant="100" id="Xbg-aY-znZ"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQZ-3A-joP">
+                                <rect key="frame" x="159" y="731" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,6 +89,7 @@
                         <outlet property="date2Label" destination="pGD-LR-jgI" id="tRA-e3-DD4"/>
                         <outlet property="dateLabel" destination="zZL-fi-7bf" id="Xqb-NI-Uwn"/>
                         <outlet property="datePicker" destination="gr7-bI-9yZ" id="F3V-Ga-Fii"/>
+                        <outlet property="mainTextField" destination="LQZ-3A-joP" id="Y19-iT-hOx"/>
                         <outlet property="yelloViewLeadingConstraint" destination="ru6-8X-nwR" id="gJz-5T-e3h"/>
                         <outletCollection property="dateLabelCollection" destination="zZL-fi-7bf" collectionClass="NSMutableArray" id="PYs-vS-bdm"/>
                         <outletCollection property="dateLabelCollection" destination="pGD-LR-jgI" collectionClass="NSMutableArray" id="05D-Ye-faa"/>
