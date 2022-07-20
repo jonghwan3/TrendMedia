@@ -47,8 +47,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Asn-ld-QT9" kind="relationship" relationship="viewControllers" id="9HL-dx-YDJ"/>
                         <segue destination="g4G-1Y-qLV" kind="relationship" relationship="viewControllers" id="ecA-9S-tUY"/>
+                        <segue destination="Asn-ld-QT9" kind="relationship" relationship="viewControllers" id="9HL-dx-YDJ"/>
                         <segue destination="Nuq-gB-edp" kind="relationship" relationship="viewControllers" id="YoR-0o-vNc"/>
                     </connections>
                 </tabBarController>

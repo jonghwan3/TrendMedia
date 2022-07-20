@@ -9,11 +9,16 @@ import UIKit
 
 class ShoppingTableViewController: UITableViewController {
     
+    @IBOutlet weak var userView: UIView!
     @IBOutlet weak var userTextField: UITextField!
     var list = ["그립톡 구매하기", "사이다 구매", "아이패드 케이스 최저가 알아보기", "양말"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 80
+        userView.layer.cornerRadius = 8.0
+        
+//        cellView.layer.cornerRadius = 3.0
     }
     
     @IBAction func addingEvent(_ sender: Any) {
@@ -31,6 +36,7 @@ class ShoppingTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell") as! ShoppingTableViewCell
         
         cell.userContentLabel.text = list[indexPath.row]
+        cell.cellView.layer.cornerRadius = 8.0
         
         return cell
         

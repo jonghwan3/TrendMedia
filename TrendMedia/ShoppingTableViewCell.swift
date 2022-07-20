@@ -11,5 +11,5 @@ class ShoppingTableViewCell: UITableViewCell {
     @IBOutlet weak var checkboxImageView: UIImageView!
     @IBOutlet weak var userContentLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
-    
+    @IBOutlet weak var cellView: UIView!
 }

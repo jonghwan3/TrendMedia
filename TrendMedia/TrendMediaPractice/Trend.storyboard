@@ -1,46 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="26a-tG-yyf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fkz-zK-KCg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Trend View Controller-->
-        <scene sceneID="s0d-6b-0kx">
-            <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TrendViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIA-QS-wEs">
-                                <rect key="frame" x="20" y="64" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="qe8-8o-VO8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="LIA-QS-wEs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="2yW-Co-eVx"/>
-                            <constraint firstItem="LIA-QS-wEs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="G5m-RZ-7By"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LIA-QS-wEs" secondAttribute="trailing" constant="20" id="sRZ-Jh-ji4"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="searchTextField" destination="LIA-QS-wEs" id="HQP-2l-r77"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-16" y="110"/>
-        </scene>
         <!--Bucket List Table View Controller-->
         <scene sceneID="saE-ef-xZW">
             <objects>
@@ -136,8 +103,58 @@
             </objects>
             <point key="canvasLocation" x="757.97101449275374" y="109.82142857142857"/>
         </scene>
+        <!--Trend Collection View Controller-->
+        <scene sceneID="Sbo-v0-7c2">
+            <objects>
+                <collectionViewController id="Fkz-zK-KCg" customClass="TrendCollectionViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Tel-Q8-SVU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="eBA-4i-MK0">
+                            <size key="itemSize" width="95" height="106"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="50" minY="50" maxX="50" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrendCollectionViewCell" id="fo5-ln-ZrP" customClass="TrendCollectionViewCell" customModule="TrendMedia" customModuleProvider="target">
+                                <rect key="frame" x="50" y="50" width="95" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="X8G-LY-ijn">
+                                    <rect key="frame" x="0.0" y="0.0" width="95" height="106"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="none" translatesAutoresizingMaskIntoConstraints="NO" id="1rM-tC-cRG">
+                                            <rect key="frame" x="0.0" y="0.0" width="95" height="106"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="1rM-tC-cRG" secondAttribute="bottom" id="BWd-BD-6qz"/>
+                                        <constraint firstAttribute="trailing" secondItem="1rM-tC-cRG" secondAttribute="trailing" id="cJP-SN-GUn"/>
+                                        <constraint firstItem="1rM-tC-cRG" firstAttribute="top" secondItem="X8G-LY-ijn" secondAttribute="top" id="kqz-jt-hNr"/>
+                                        <constraint firstItem="1rM-tC-cRG" firstAttribute="leading" secondItem="X8G-LY-ijn" secondAttribute="leading" id="zR3-re-INk"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="95" height="106"/>
+                                <connections>
+                                    <outlet property="trendImageView" destination="1rM-tC-cRG" id="ycd-RD-IP5"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Fkz-zK-KCg" id="dKD-8V-DCP"/>
+                            <outlet property="delegate" destination="Fkz-zK-KCg" id="fg5-D8-010"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4d-3V-iNQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534.7826086956522" y="109.82142857142857"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="none" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
