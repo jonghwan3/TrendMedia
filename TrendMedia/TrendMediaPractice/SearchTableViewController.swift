@@ -32,5 +32,14 @@ class SearchTableViewController: UITableViewController {
         cell.configureCell(data: movieList[indexPath.row])
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: "Trend", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: TrendCollectionViewController.identifier) as! TrendCollectionViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
 
 }

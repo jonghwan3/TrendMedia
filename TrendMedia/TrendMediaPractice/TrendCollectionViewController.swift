@@ -17,6 +17,8 @@ import Kingfisher
 
 class TrendCollectionViewController: UICollectionViewController {
     
+    static let identifier = "TrendCollectionViewController"
+    
     var imageURL = "https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20220708_123%2F1657272256389R34Q0_JPEG%2Fmovie_image.jpg"
     
     override func viewDidLoad() {
@@ -42,7 +44,9 @@ class TrendCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrendCollectionViewCell", for: indexPath) as! TrendCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrendCollectionViewCell", for: indexPath) as? TrendCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         //cell.trendImageView.image = UIImage(systemName: "arrowshape.turn.up.right.circle")
         let url = URL(string: imageURL)
         cell.trendImageView.kf.setImage(with: url)
@@ -54,6 +58,7 @@ class TrendCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        view.makeToast("\(indexPath.item)번째 셀을 선택했습니다.")
         view.makeToast("\(indexPath.item)번째 셀을 선택했습니다.", duration: 1, position: .bottom)
+        self.navigationController?.popViewController(animated: true)
     }
     
 
